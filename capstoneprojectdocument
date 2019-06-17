@@ -1,0 +1,40 @@
+
+CAPSTONE PROJECT
+The project, I intend to do is based on a hypothetical scenario where a coffee shop chain company want to start a coffee shop in the Central Toronto location. The data can also help other small coffee shop retailers. The main motivation is to aid any Coffee Shop chain or CCD chains, or any other retailer help set up shop in the Central Toronto region. The analysis can aid CCD chains or retailers in picking locations for the setup of their coffee shops. The main aim is to help a Coffee Shop retail chain help find locations for setting up shops in the Central Toronto region.
+
+OBJECTIVE
+The objective of the project is to analyse the locations in Central Toronto and recommend good locations to open Coffee Shop for a CCD and Coffee Shop chain retailer. The project aims to use location data and data manipulation and other statistical techniques such as clustering to recommend best locations for a coffee shop. The main problem is which are set of best locations to open a CCD in Central Toronto
+
+TARGET AUDIENCE
+The target audiences are CCD coffee shop chains and other small retailers who can leverage the data for opening coffee shops. The retail chains like Starbucks use location data to open their stores in locations without affecting the business of their other stores and for maximizing the profit in the new store or shop.
+
+DATA
+The data required are as follows. Toronto neighbourhood data and postal code data Toronto neighbourhood location data Data for top coffee house location. The data related to coffee shops in the neighbourhood The Toronto neighbourhood data will be scrapped from this site https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M The neighbourhood location can be taken from the csv file or can be extracted using Geopy or Google API key. The FourSquare API will be used to fetch the criterion-based data of the neighbourhoods in the Central Toronto region. The FourSquare API based data will be taken where the top venues of about 100 in number will be grouped together. The data will be accessed through API calls to FourSquare. The criterion-based data will be filtered from that data for the coffee shops and the top venues can be categorized based on their frequency of the location. The data from the venues can be filtered for the coffee shops and then clustering can be done on them to identify the location cluster where the coffee shops can be opened
+
+METHODOLOGY
+The data was scraped from the Toronto Wikipedia page using the Beautiful Soup Python package with the help of html request and other packages. The data was converted into a Data Frame using the Pandas application. The page gave the neighbourhood data of the Toronto region with the different neighbourhoods and the postal codes and borough given for each postal code location. The latitude and longitude data were also required for the project as the FourSquare API needs location data for the extraction of neighbourhood data and give criteria-based location. The location data can be extracted using the GEOPY package of python by passing the neighbourhood and postal code data. The GEOPY package was attempted to use to extract the location-based data but it could not extract the data properly. The data was then taken from the CSV file provided for the location data. The location data was merged with the Data Frame using the merge functions in the Pandas library. The Pandas data frame was then filtered and only the cells with the borough of the Central Toronto region was considered for the analysis. The data frame location data was then used to fetch data from the FourSquare API . The data of 100 neighbourhoods in the 500 m radius was extracted from the FourSquare API using the call method of the API. The data consisted of top neighbourhood venues in the Central Toronto region. The call was made after making a FourSqaure account. The data extracted from the FourSquare API was then bifurcated using the different venue categories. The different categories in the neighbourhood venues were identified in the program. The top venues with the highest frequency of occurrence was grouped together which were around 10 in number. The coffee shop venue data was then filtered into a data frame. The K-means clustering algorithm was used for clustering the data into 3 clusters. The K-means was used for the statistical approach as the K-means is best for grouping data with similar properties. The K means clustering was used based on the frequency of the occurrence of the venues in the neighbourhood. The clustered data was merged with the venue data to identify the different venues in each cluster. The K-means clusters each based on a distance from a central cluster node
+
+RESULTS
+The cluster of the data gave three clusters results mainly as follows. The three clusters gave information about the different venues what are the different venues in each cluster
+Cluster 0- Contained no coffee shops
+Cluster 1- Contained a few coffee shops
+Cluster 2- Contained a lot of coffee shops
+The data is shown as the following 
+Fig Cluster 0 
+Fig Cluster1
+The cluster 1 data consists of more coffee shops as you can see. The analysis identified around 7 coffee shops in the cluster 1 data.
+
+Fig Cluster 2
+The cluster 2 mainly consists of just a few coffee shops. The cluster 2 mainly contained 2 coffee shops in number.
+
+CONCLUSION
+The analysis showed the cluster 0 had no coffee shops. The cluster 1 has a lot of coffee shops and cluster2 has some coffee shops. The analysis shows that is best for the retail coffee shop chain to open a store in the cluster 1 region as it has no coffee shops and there are no major retail coffee shops in the area. Cluster 2 region can also be considered though it has a Starbucks and one more coffee shop which will need to be taken into consideration for the retail chain to start a store. The cluster 0 area in the Central Toronto neighbourhood is best recommended for the coffee shop. The project tried to recommend best location or areas for the opening of a CCD or coffee shop store for small retailers or CCD chains using machine learning and other statistical methods in the Central Toronto region.
+
+FUTURE SCOPE
+The future scope can be to involve population-based data for the analysis. The analysis based on a location of just coffee shops is limited. The further data on population and peoples preference data for the different types of coffees can also be taken for the type of the coffee shop and other such data can be involved for the analysis
+
+REFERENCES
+The data is scraped from this page https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M
+The location data is taken from the FourSqaure API
+
+ 
